@@ -30,6 +30,15 @@ public class Exam01 {
     }
 
     public String getScore() {
+
+        if(scoreA==15 && scoreB==15){
+            return "Fifteen-All";
+        }if(scoreA==30 && scoreB==30){
+            return "Thirty-All";
+        }if(scoreA==40 && scoreB==40){
+            return "Deuce";
+        }
+
         if(scoreA==15){
             return "Fifteen-Love";
         }
@@ -46,9 +55,9 @@ public class Exam01 {
         }
         if(scoreB ==30) {
             return "Love-Thirty";
-        }if(scoreA == 40){
+        }if(scoreB == 40){
             return "Love-Forty";
-        }if(scoreA >40){
+        }if(scoreB >40){
             return "Win for Player B";
         }
         return "Love-All";
