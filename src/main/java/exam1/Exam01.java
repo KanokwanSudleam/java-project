@@ -92,24 +92,41 @@ public class Exam01 {
             return "Deuce";
         }
 
-
-        if(scoreA==15){
-            return "Fifteen-Love";
+        if(turn == 1){
+            if(checkroundA==1){
+                return "Fifteen-Love";
+            }else{
+                return "Love-Fifteen";
+            }
         }
-        if(scoreA == 30){
-            return "Thirty-Love";
-        }if(scoreA == 40){
+        if(turn == 2){
+            if(checkroundA==2){
+                return "Thirty-Love";
+            }else if(checkroundB ==2){
+                return "Love-Thirty";
+            }else{
+                return "Fifteen-All";
+            }
+        }
+//        if(scoreA==15){
+//            return "Fifteen-Love";
+//        }
+//        if(scoreA == 30){
+//            return "Thirty-Love";
+//        }
+        if(scoreA == 40){
             return "Forty-Love";
         }if(scoreA >40){
             return "Win for Player A";
         }
 
-        if(scoreB == 15){
-            return "Love-Fifteen";
-        }
-        if(scoreB ==30) {
-            return "Love-Thirty";
-        }if(scoreB == 40){
+//        if(scoreB == 15){
+//            return "Love-Fifteen";
+//        }
+//        if(scoreB ==30) {
+//            return "Love-Thirty";
+//        }
+        if(scoreB == 40){
             return "Love-Forty";
         }if(scoreB >40){
             return "Win for Player B";
